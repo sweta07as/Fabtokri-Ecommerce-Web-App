@@ -1,0 +1,56 @@
+.para {
+  margin: 2vmax 15vmax;
+  font: 400 1.15vmax Roboto Slab;
+  color: #333333;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#Craft1 {
+  float: right;
+  width: 45%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-left: 3vmax;
+  margin-bottom: 0.5vmax;
+}
+
+.para h1 {
+  font: 600 1.5vmax Roboto Slab;
+  margin-bottom: 0.2vmax;
+  color: #800039;
+}
+
+.para hr {
+  border: none;
+  height: 0.2vmax;
+  background-color: #707070;
+  margin-bottom: 1.5vmax;
+  width: 3.5vmax;
+}
+
+.para p {
+  margin-bottom: 2vmax;
+  color: #707070;
+}
+
+.para h3 {
+  color: #303030;
+  /* font: 600 1.4vmax Roboto; */
+  margin-bottom: 2vmax;
+}
+
+.para h4 {
+  color: #707070;
+  font-family: Arial, sans-serif;
+  font-size: 1.4vmax;
+  font-weight: 600;
+  margin-bottom: 2vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .para {
+    margin: 5vmax 5vmax;
+  }
+}

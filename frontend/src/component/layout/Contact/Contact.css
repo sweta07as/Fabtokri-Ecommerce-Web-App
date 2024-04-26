@@ -1,0 +1,85 @@
+.contactBody {
+  margin: 5vmax 15vmax;
+  font: 400 1.4vmax Roboto Slab;
+  color: #333333;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.contactBody h1 {
+  font: 800 2vmax Roboto Slab;
+  margin-bottom: 0.2vmax;
+  color: #800039;
+}
+
+.contactBody hr {
+  border: none;
+  height: 0.45vmax;
+  background-color: #303030;
+  margin-bottom: 5vmax;
+  width: 4.5vmax;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 50vh; */
+}
+
+.contact-form {
+  background-color: #ffffff;
+  /* padding: 1vmax; */
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Add space evenly between inputs */
+  height: 60vh; 
+  top: 0;
+}
+
+.contact-inputs input,
+.contact-inputs textarea {
+  padding: 0.5vmax 2vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 0.9vmax;
+  outline: none;
+}
+
+.contact-inputs input[type="submit"] {
+  border: none;
+  background-color: rgb(128, 0, 57);
+  color: white;
+  font: 300 0.9vmax "Roboto Slab";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+.contact-inputs input[type="submit"]:hover {
+  background-color: #500024;
+}
+
+.contact-inputs textarea {
+  resize: vertical;
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: auto;
+  }
+}

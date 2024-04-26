@@ -1,0 +1,269 @@
+.banner {
+  /* background-image: linear-gradient(to right, #635dc0, #3027ae); */
+  /* background-image: url("../../images/Loomsblue.JPG"); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* height: 85vmin; */
+  /* width: 100vmax;  */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0;
+}
+
+.SliderImage {
+  /* display: block; */
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner > h1 {
+  margin: 5vmax;
+
+  font: 600 2.5vmax "Roboto Slab";
+}
+
+.banner > p {
+  font: 300 1.4vmax "Lucida Sans";
+}
+
+.banner > a > button {
+  margin-bottom: 5vmax;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 0;
+  padding: 1vmax;
+  transition: all 0.5s;
+  width: 9vmax;
+  font: 500 1vmax "Roboto Slab";
+}
+
+/* .banner > a > button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+} */
+
+/* .banner::after {
+  content: "";
+  width: 100vw;
+  height: 100vmin;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  /* clip-path: polygon(100% 68%, 0 100%, 100% 100%); */
+/* max-width: 100%; */
+/* } */
+
+@font-face {
+  font-family: "Samarkan";
+  src: url("SAMARN__.TTF") format("truetype");
+}
+
+.homeHeading {
+  text-align: center;
+  font-size: 1.2vmax;
+  font-family: "Roboto Slab";
+  border-bottom: 0.1vmax solid rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  width: 40vmax;
+  padding: 0vmax;
+  margin: 3vmax auto 0.8vmax auto;
+  color: rgb(0, 0, 0, 0.7);
+}
+
+.homeHeadingSpan {
+  font-size: 1.6vmax;
+  font-family: "Samarkan", sans-serif;
+  font-weight: 500;
+  /* width: 2vmax; */
+  padding: 0.6vmax;
+  margin: 5vmax auto;
+  color: #800039;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto 5vmax auto;
+  width: 80vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.productCard {
+  width: 20vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+}
+
+.productCard > img {
+  width: 20vmax;
+  margin: 0vmax;
+}
+
+.productCard > div {
+  margin: 0.5vmax;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.productCardSpan {
+  margin: 0.5vmax;
+  font: 300 0.7vmax "Roboto Slab";
+}
+
+.productCard > p {
+  font-family: "Roboto Slab";
+  font-size: 1vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+}
+
+/* 
+.productCard > span {
+
+} */
+
+.priceInfoHome > h1 {
+  color: rgb(128, 0, 57);
+  font: 400 1.2vmax "Roboto Slab";
+  margin: 0vmax 0.5vmax 0 0;
+}
+
+.priceInfoHome > h3 {
+  color: rgba(17, 17, 17, 0.795);
+  font: 200 1vmax "Franklin Gothic Medium";
+  margin: 0vmax 0.5vmax;
+  text-decoration: line-through;
+}
+
+.priceInfoHomeDiscount {
+  color: green;
+  font: 400 1.2vmax "Franklin Gothic Medium";
+  margin: 0vmax 0.5vmax;
+}
+
+.priceInfoHome {
+  display: flex;
+  gap: 1vmax;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.categoryLinks {
+  display: flex;
+  flex-direction: row;
+  margin: 2vmax 13.5vmax 0 13.5vmax;
+}
+
+.categoryLink {
+  width: 20vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 0 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+}
+
+.categoryLink > img {
+  width: 20vmax;
+  margin: 0vmax;
+}
+
+.categoryLink > p {
+  font-family: "Roboto Slab";
+  font-size: 1vmax;
+  margin: 0.5vmax 0;
+  margin-bottom: 0;
+}
+
+.categoryLink:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+
+  transform: translateY(-0.2vmax);
+}
+
+.productCard:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+
+  transform: translateY(-0.2vmax);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100vw;
+  }
+
+  .banner{
+    height: 50vmin;
+  }
+
+
+.homeHeading {
+  font-size: 1.6vmax;
+  width: 30vmax;
+  margin: 3vmax auto 0.1vmax auto;
+  }
+
+  .homeHeadingSpan {
+    font-size: 2.2vmax;
+  }
+
+  .categoryLinks {
+    margin: 0 2vmax;
+    padding-bottom: 0.5vmax;
+  }
+
+  .categoryLink {
+    width: 15vmax;
+    margin: 0.4vmax;
+    padding-bottom: 0vmax;
+  }
+
+  .categoryLink > img {
+    width: 13vmax;
+    margin: 0vmax;
+  }
+
+  .categoryLink > p {
+    font-size: 1.5vmax;
+  }
+
+  .productCard {
+    margin: 0.5vmax;
+  }
+
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+
+  .productCard > div {
+    margin: 0vmax;
+    display: block;
+  }
+
+  .productCard > span {
+    font-size: 1.5vmax;
+  }
+
+  .productCard > div > span {
+    margin: 0 0.5vmax;
+    font: 300 1vmax "Roboto Slab";
+  }
+}
