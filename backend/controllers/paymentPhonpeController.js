@@ -22,12 +22,12 @@ exports.checkout = asyncError(async (req, res, next) => {
 
     amount: Number(req.body.amount * 100),
     // amount: 10000,
-    // redirectUrl: "http://localhost:3000/paymentsuccess",
-    redirectUrl: "https://www.fabtokri.in/paymentsuccess",
+    redirectUrl: "http://localhost:3000/paymentsuccess",
+    // redirectUrl: "https://www.fabtokri.in/paymentsuccess",
     redirectMode: "REDIRECT",
     // callbackUrl: "http://localhost:4000/api/v1/paymentverification", //not in use in staging or prod
-    // callbackUrl: "http://localhost:3000/callback",
-    callbackUrl: "https://www.fabtokri.in/callback",
+    callbackUrl: "http://localhost:3000/callback",
+    // callbackUrl: "https://www.fabtokri.in/callback",
     mobileNumber: "8969963531",
     paymentInstrument: {
       type: "PAY_PAGE",

@@ -7,7 +7,7 @@ const express = require("express");
 const path = require("path");
 const React = require("react");
 const ReactDOMServer = require("react-dom/server");
-//const App = require("/home/ubuntu/FullStack-Ecommerce-WebApp/frontend/src/App");
+//const App = require("/home/ubuntu/Fabtokri-Ecommerce-Web-App/frontend/src/App");
 
 //Handling uncaught exception
 process.on("uncaughtException", (err) => {
@@ -17,7 +17,8 @@ process.on("uncaughtException", (err) => {
 });
 
 //config
-dotenv.config({ path: "/home/ubuntu/FullStack-Ecommerce-WebApp/.env" });
+// dotenv.config({ path: "/home/ubuntu/Fabtokri-Ecommerce-Web-App/.env" });
+dotenv.config({ path: "config/config.env" });
 
 //connecting to database
 connectDatabase();
@@ -65,3 +66,42 @@ process.on("unhandledRejection", (err) => {
     process.exit(1);
   });
 });
+
+// const app = require("./app");
+// const dotenv = require("dotenv");
+// const cloudinary = require("cloudinary");
+// const connectDatabase = require("./config/database");
+
+// //Handling uncaught exception
+// process.on("uncaughtException", (err) => {
+//   console.log(`Error: ${err.message}`);
+//   console.log(`Shutting down the server due to Uncaught Exception`);
+//   process.exit(1);
+// });
+
+// //config
+// dotenv.config({ path: "backend/config/config.env" });
+
+// //connecting to database
+// connectDatabase();
+
+// cloudinary.config({
+//   cloud_name: process.env.CLOUDINARY_NAME,
+//   api_key: process.env.CLOUDINARY_API_KEY,
+//   api_secret: process.env.CLOUDINARY_API_SECRET,
+// });
+
+// const server = app.listen(process.env.PORT, () => {
+//   console.log(`Server is working on http://localhost:${process.env.PORT}`);
+// });
+
+// //Unhandled Promise Rejection
+// process.on("unhandledRejection", (err) => {
+//   console.log(`Error: ${err.message}`);
+//   console.log(`Shutting down the server due to Unhandled Promise Rejection`);
+  
+//   server.close(() => {
+//     process.exit(1);
+//   });
+// });
+

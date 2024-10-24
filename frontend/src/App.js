@@ -10,7 +10,7 @@ import Home from "./component/Home/Home";
 import Products from "./component/Product/Products";
 import { loadUser } from "./actions/userAction";
 import store from "./store";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import ProtectedRoute from "./component/Route/ProtectedRoute";
 
 const ProductDetails = React.lazy(() => import("./component/Product/ProductDetails"));

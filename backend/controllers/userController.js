@@ -91,8 +91,8 @@ exports.forgotPassword = asyncError(async (req, res, next) => {
   // )}/api/v1/password/reset/${resetToken}`;
 
   // const resetPasswordUrl = `http://15.206.67.237/password/reset/${resetToken}`;
-  // const resetPasswordUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`;
-  const resetPasswordUrl = `https://www.fabtokri.in/password/reset/${resetToken}`;
+  const resetPasswordUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`;
+  // const resetPasswordUrl = `https://www.fabtokri.in/password/reset/${resetToken}`;
 
   const message = `Your password reset token is :- ${resetPasswordUrl} \n If you have not requested this email then, please ignore it.`;
 

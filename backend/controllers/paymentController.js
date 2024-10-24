@@ -50,10 +50,10 @@ exports.paymentVerification = asyncError(async (req, res) => {
     });
 
     res.redirect(
-      // `http://localhost:3000/paymentsuccess?reference=${razorpay_payment_id}`
+      `http://localhost:3000/paymentsuccess?reference=${razorpay_payment_id}`
       // `http://15.206.67.237/paymentsuccess?reference=${razorpay_payment_id}`
       // `https://www.fabtokri.in/paymentsuccess?reference=${razorpay_payment_id}`
-      `${req.protocol}://${req.get('host')}/paymentsuccess?reference=${razorpay_payment_id}`
+      // `${req.protocol}://${req.get('host')}/paymentsuccess?reference=${razorpay_payment_id}`
     );
 
   } else {

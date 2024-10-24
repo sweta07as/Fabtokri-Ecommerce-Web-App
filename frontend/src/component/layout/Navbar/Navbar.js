@@ -1,13 +1,13 @@
-import React, { Fragment, useState, useEffect, useRef } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Logo from "../../../images/logopng.png";
 import Profile from "@material-ui/icons/AccountCircleOutlined";
 import Search from "@material-ui/icons/SearchOutlined";
 import Cart from "@material-ui/icons/LocalMallOutlined";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import "./Navbar.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-import { useAlert } from "react-alert";
+// import { useAlert } from "react-alert";
 
 // import { GiHamburgerMenu } from "react-icons/gi";
 import HamBurgerMenuIcon from "@material-ui/icons/Menu";
@@ -17,10 +17,10 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   // const dispatch = useDispatch();
-  const alert = useAlert();
+  // const alert = useAlert();
   const history = useHistory();
 
-  const { user, isAuthenticated, error } = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.user);
   
   const { cartItems } = useSelector((state) => state.cart);
 
@@ -54,14 +54,14 @@ const Navbar = () => {
     // history.push("/admin/dashboard");
   }, [user]);
 
-  const handleDashboardClick = () => {
-    if (isAuthenticated && role === "admin") {
-      history.push("/admin/dashboard");
-    } else {
-      // Redirect the user to a different page or show an error message
-      alert.error("You are not authorized to access this page!");
-    }
-  };
+  // const handleDashboardClick = () => {
+  //   if (isAuthenticated && role === "admin") {
+  //     history.push("/admin/dashboard");
+  //   } else {
+  //     // Redirect the user to a different page or show an error message
+  //     alert.error("You are not authorized to access this page!");
+  //   }
+  // };
 
   const [keyword, setKeyword] = useState("");
 

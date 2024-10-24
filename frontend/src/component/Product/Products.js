@@ -5,23 +5,23 @@ import { clearErrors, getProduct } from "../../actions/productAction";
 import Loader from "../layout/Loader/Loader";
 import ProductCard from "../Home/ProductCard";
 import Pagination from "react-js-pagination";
-import Slider from "@material-ui/core/Slider";
-import Typography from "@material-ui/core/Typography";
+// import Slider from "@material-ui/core/Slider";
+// import Typography from "@material-ui/core/Typography";
 import { useAlert } from "react-alert";
 import MetaData from "../layout/Metadata";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
-const categories = [
-  // "akola",
-  // "bandhani",
-  // "shibori",
-  // "bagru",
-  // "banarasi",
-  // "madhubani",
-  "dupatta",
-  "stole",
-  "saree",
-];
+// const categories = [
+//   // "akola",
+//   // "bandhani",
+//   // "shibori",
+//   // "bagru",
+//   // "banarasi",
+//   // "madhubani",
+//   "dupatta",
+//   "stole",
+//   "saree",
+// ];
 
 const Products = ({ match, location }) => {
   const dispatch = useDispatch();
@@ -48,9 +48,9 @@ const Products = ({ match, location }) => {
     setCurrentPage(e);
   };
 
-  const priceHandler = (event, newPrice) => {
-    setPrice(newPrice);
-  };
+  // const priceHandler = (event, newPrice) => {
+  //   setPrice(newPrice);
+  // };
 
   const memoizedQuery = useMemo(
     () => new URLSearchParams(location.search),

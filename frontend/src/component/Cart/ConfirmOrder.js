@@ -6,8 +6,8 @@ import "./ConfirmOrder.css";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import axios from "axios";
-import { useAlert } from "react-alert";
-import Logo from "../../images/android-chrome-192x192.png";
+// import { useAlert } from "react-alert";
+// import Logo from "../../images/android-chrome-192x192.png";
 
 import { applyCoupon } from "../../actions/couponAction";
 // import { APPLY_COUPON_SUCCESS } from "../../constants/couponConstants";

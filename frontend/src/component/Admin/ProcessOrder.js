@@ -18,7 +18,7 @@ import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import { Button } from "@material-ui/core";
 import { UPDATE_ORDER_RESET } from "../../constants/orderConstants";
 
-import { TRACK_SHIPMENT_RESET } from "../../constants/deliveryConstants"; // Add your constants here
+// import { TRACK_SHIPMENT_RESET } from "../../constants/deliveryConstants"; // Add your constants here
 
 import "./ProcessOrder.css";
 import "./NewProduct.css";
@@ -90,7 +90,7 @@ const ProcessOrder = ({ history, match }) => {
       // Dispatch trackShipment with the waybill value
       dispatch(trackShipment(waybill));
     }
-  }, [dispatch, order]);
+  }, [dispatch, waybill, order]);
 
   return (
     <Fragment>

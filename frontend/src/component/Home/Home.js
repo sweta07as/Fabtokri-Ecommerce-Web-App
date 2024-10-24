@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 // import { CgMouse } from "react-icons/all";
 import "./Home.css";
 import MetaData from "../layout/Metadata";
@@ -25,7 +25,7 @@ import Dupatta from "../../images/Dupatta.png";
 import Stole from "../../images/Stole.png";
 import Saree from "../../images/Saree.png";
 import { Link } from "react-router-dom"; 
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 
 const Home = () => {
@@ -35,7 +35,7 @@ const Home = () => {
 
   const images = [One, Two, Three, Four, Five];
 
-  const history = useHistory();
+  // const history = useHistory();
 
   useEffect(() => {
     if (error) {

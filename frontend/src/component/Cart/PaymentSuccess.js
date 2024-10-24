@@ -4,14 +4,14 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import ErrorIcon from "@material-ui/icons/Error";
 import PendingIcon from "@material-ui/icons/HourglassEmpty";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
-import { updatePaymentInfoInOrder } from "../../actions/orderAction";
+// import { updatePaymentInfoInOrder } from "../../actions/orderAction";
 
 import { Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 import axios from "axios";
 
@@ -19,7 +19,9 @@ import Loader from "../layout/Loader/Loader.js";
 
 const PaymentSuccess = () => {
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
-  const { shippingInfo, cartItems, loading } = useSelector(
+  const { 
+    // shippingInfo, cartItems, 
+    loading } = useSelector(
     (state) => state.cart
   );
 
@@ -28,7 +30,7 @@ const PaymentSuccess = () => {
 
   const [responseCode, setResponseCode] = useState("pending");
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   // const location = useLocation();
   // const searchParams = new URLSearchParams(location.search);
@@ -56,8 +58,7 @@ const PaymentSuccess = () => {
 
   useEffect(() => {
     fetchResponseCode();
-    
-  }, []);
+  });
 
   const handlePaymentVerification = () => {
     // Call the fetchResponseCode function to make the API call

@@ -53,7 +53,9 @@ const Footer = () => {
           <p>&copy; Fabtokri 2023</p>
           <p className="atews">
             Designed and Developed by
-            <a href="https://www.fiverr.com/iam_sweta_as">ATEWS</a>
+            <a href="https://www.linkedin.com/in/sweta-kumari-2ba730204/">
+              ATEWS
+            </a>
           </p>
         </div>
         <div className="links">

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import "./OrderDetails.css";
 import { useSelector, useDispatch } from "react-redux";
 import MetaData from "../layout/Metadata";
@@ -7,7 +7,7 @@ import { Typography } from "@material-ui/core";
 import { clearErrors, getOrderDetails } from "../../actions/orderAction";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
-import axios from "axios";
+// import axios from "axios";
 
 import { trackShipment } from "../../actions/deliveryAction";
 
