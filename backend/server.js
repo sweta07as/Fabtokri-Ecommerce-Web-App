@@ -1,12 +1,9 @@
-const fs = require("fs");
 const app = require("./app");
 const dotenv = require("dotenv");
 const cloudinary = require("cloudinary");
 const connectDatabase = require("./config/database");
 const express = require("express");
 const path = require("path");
-const React = require("react");
-const ReactDOMServer = require("react-dom/server");
 
 //Handling uncaught exception
 process.on("uncaughtException", (err) => {
