@@ -8,12 +8,12 @@ const Order = require("../models/orderModel");
 //PAY API
 exports.checkout = asyncError(async (req, res, next) => {
   const payload = {
-    merchantId: "FABTOKRIONLINE",
-    // merchantId: "PGTESTPAYUAT96",
-    // merchantTransactionId: "MT7850590068188104",
-    merchantTransactionId: `MT${Date.now()}${Math.random()
-      .toString(36)
-      .substring(2, 10)}`,
+    // merchantId: "FABTOKRIONLINE",
+    merchantId: "PGTESTPAYUAT96",
+    merchantTransactionId: "MT7850590068188104",
+    // merchantTransactionId: `MT${Date.now()}${Math.random()
+    //   .toString(36)
+    //   .substring(2, 10)}`,
 
     // merchantUserId: req.body.userId,
     merchantUserId: `MUID${Date.now()}${Math.random()
@@ -53,8 +53,8 @@ exports.checkout = asyncError(async (req, res, next) => {
 
   // console.log(finalChecksum);
 
-  // const url = "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay";
-  const url = "https://api.phonepe.com/apis/hermes/pg/v1/pay"; //for prod
+  const url = "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay";
+  // const url = "https://api.phonepe.com/apis/hermes/pg/v1/pay"; //for prod
 
   const headers = {
     "Content-Type": "application/json",
@@ -84,10 +84,10 @@ exports.checkout = asyncError(async (req, res, next) => {
 
 //CHECK STATUS API
 exports.paymentVerification = asyncError(async (req, res) => {
-  const merchantId = "FABTOKRIONLINE";
-  // const merchantId = "PGTESTPAYUAT96";
-  const merchantTransactionId = req.params.transactionId;
-  // const merchantTransactionId = "MT7850590068188104";
+  // const merchantId = "FABTOKRIONLINE";
+  const merchantId = "PGTESTPAYUAT96";
+  // const merchantTransactionId = req.params.transactionId;
+  const merchantTransactionId = "MT7850590068188104";
 
   const saltIndex = process.env.PhonepekeyIndex;
   const saltKey = process.env.Phonepekey;
@@ -103,8 +103,8 @@ exports.paymentVerification = asyncError(async (req, res) => {
 
   // console.log(finalChecksum);
 
-  // const url = `https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/${merchantId}/${merchantTransactionId}`;
-  const url = `https://api.phonepe.com/apis/hermes/pg/v1/status/${merchantId}/${merchantTransactionId}`; //for prod
+  const url = `https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/${merchantId}/${merchantTransactionId}`;
+  // const url = `https://api.phonepe.com/apis/hermes/pg/v1/status/${merchantId}/${merchantTransactionId}`; //for prod
 
   const headers = {
     "Content-Type": "application/json",
